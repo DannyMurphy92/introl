@@ -1,10 +1,10 @@
-'use strict'
+'use strict';
 
-const webpack = require('webpack')
-const path = require('path')
-const merge = require('webpack-merge')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const commonConfig = require('./webpack.config.common')
+const webpack = require('webpack');
+const path = require('path');
+const merge = require('webpack-merge');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const commonConfig = require('./webpack.config.common');
 
 const webpackConfig = merge(commonConfig, {
   mode: 'development',
@@ -20,10 +20,7 @@ const webpackConfig = merge(commonConfig, {
       chunks: 'all',
     },
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new FriendlyErrorsPlugin(),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin(), new FriendlyErrorsPlugin()],
   devServer: {
     compress: true,
     historyApiFallback: true,
@@ -34,6 +31,6 @@ const webpackConfig = merge(commonConfig, {
       normal: true,
     },
   },
-})
+});
 
-module.exports = webpackConfig
+module.exports = webpackConfig;

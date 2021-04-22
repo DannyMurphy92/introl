@@ -1,16 +1,10 @@
 module.exports = {
   overrides: [
     {
-      files: ['*.js'],
+      files: ['./**/*.js'],
       rules: {
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/no-var-requires': 'off',
-      },
-    },
-    {
-      files: ['./src/*.js'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'error',
       },
     },
     {
@@ -19,19 +13,11 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
       },
     },
-    {
-      files: ['./src/**/mocks/*.ts'],
-      rules: {
-        // makes working with mock stores easier
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
-      },
-    },
   ],
   extends: [
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
     'prettier',
     'plugin:vue/recommended',
-    'prettier/vue',
     'eslint:recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
@@ -104,8 +90,6 @@ module.exports = {
     'no-template-curly-in-string': 'off',
     'no-case-declarations': 'warn',
     'no-empty': ['error', { allowEmptyCatch: true }],
-    '@typescript-eslint/explicit-member-accessibility': 0,
-    indent: 'off',
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -119,6 +103,10 @@ module.exports = {
     ],
     'no-unused-expressions': 0,
     '@typescript-eslint/no-empty-function': 0,
+    'space-before-function-paren': 'off',
+    semi: 'off',
+    'comma-dangle': 'off',
+    'prefer-regex-literals': 'off',
   },
   plugins: ['import', 'prettier', '@typescript-eslint', 'eslint-plugin-vue'],
   settings: {

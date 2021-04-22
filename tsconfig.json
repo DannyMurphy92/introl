@@ -18,15 +18,27 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/web-client/*"]
+      "@/*": [
+        "src/web-client/*"
+      ]
     },
     "allowSyntheticDefaultImports": true,
     /* Experimental Options  */
     "experimentalDecorators": false,
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["./src/web-client/**/*.ts", "./src/web-client/**/*.vue"],
-  "exclude": ["node_modules"]
+  "include": [
+    "./src/web-client/**/*.ts",
+    "./src/web-client/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
