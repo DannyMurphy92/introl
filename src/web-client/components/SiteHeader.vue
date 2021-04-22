@@ -1,19 +1,13 @@
 <template>
-  <div class="site-header">
-    <ContactDetails />
-  </div>
+  <div class="site-header"></div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import ContactDetails from '@/components/ContactDetails.vue'
+import Vue from 'vue';
 
 export default Vue.extend({
   name: 'SiteHeader',
-  components: {
-    ContactDetails,
-  },
-})
+});
 </script>
 
 <style lang="scss">

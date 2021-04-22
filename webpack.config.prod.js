@@ -1,14 +1,13 @@
-const path = require('path')
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const CopyPlugin = require('copy-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const CompressionPlugin = require('compression-webpack-plugin')
-const commonConfig = require('./webpack.config.common')
-const isProd = process.env.NODE_ENV === 'production'
-const environment = isProd ? require('./env/prod.env') : require('./env/staging.env')
+const path = require('path');
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const commonConfig = require('./webpack.config.common');
+const isProd = process.env.NODE_ENV === 'production';
+const environment = isProd ? require('./env/prod.env') : require('./env/staging.env');
 
 const webpackConfig = merge(commonConfig, {
   mode: 'production',
@@ -25,10 +24,12 @@ const webpackConfig = merge(commonConfig, {
           preset: ['default', { discardComments: { removeAll: true } }],
         },
       }),
-      new UglifyJSPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: !isProd,
+      // https://github.com/webpack-contrib/terser-webpack-plugin
+      new TerserPlugin({
+        terserOptions: {
+          mangle: true,
+          compress: false,
+        },
       }),
     ],
     splitChunks: {
@@ -39,8 +40,8 @@ const webpackConfig = merge(commonConfig, {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name(module) {
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1]
-            return `npm.${packageName.replace('@', '')}`
+            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+            return `npm.${packageName.replace('@', '')}`;
           },
         },
         styles: {
@@ -66,16 +67,15 @@ const webpackConfig = merge(commonConfig, {
       minRatio: 0.8,
     }),
     new webpack.HashedModuleIdsPlugin(),
-    new CopyPlugin([{ from: '_redirects' }]),
   ],
-})
+});
 
 if (!isProd) {
-  webpackConfig.devtool = 'source-map'
+  webpackConfig.devtool = 'source-map';
 
   if (process.env.npm_config_report) {
-    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-    webpackConfig.plugins.push(new BundleAnalyzerPlugin())
+    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+    webpackConfig.plugins.push(new BundleAnalyzerPlugin());
   }
 }
-module.exports = webpackConfig
+module.exports = webpackConfig;

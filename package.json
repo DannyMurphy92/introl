@@ -8,17 +8,16 @@
     "test": "jest"
   },
   "dependencies": {
-    "vue": "2.6.11",
-    "vue-router": "3.0.7"
+    "vue": "2.6.12",
+    "vue-router": "3.4.9"
   },
   "devDependencies": {
     "@types/jest": "26.0.20",
-    "@types/webpack-env": "^1.14.1",
-    "@vue/test-utils": "^1.0.0-beta.30",
+    "@types/webpack-env": "1.14.1",
+    "@vue/test-utils": "1.0.0-beta.30",
     "babel-core": "6.26.3",
-    "cache-loader": "^4.1.0",
-    "compression-webpack-plugin": "^3.0.1",
-    "copy-webpack-plugin": "^5.1.1",
+    "cache-loader": "4.1.0",
+    "compression-webpack-plugin": "3.0.1",
     "cross-env": "6.0.3",
     "css-loader": "3.1.0",
     "css-mqpacker": "7.0.0",
@@ -34,6 +33,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "file-loader": "4.1.0",
     "friendly-errors-webpack-plugin": "1.7.0",
+    "html-webpack-plugin": "3.2.0",
     "husky": "3.1.0",
     "jest": "26.6.3",
     "lint-staged": "9.5.0",
@@ -46,18 +46,18 @@
     "sass-resources-loader": "2.0.1",
     "stylelint": "10.1.0",
     "stylelint-config-sass-guidelines": "6.2.0",
+    "terser-webpack-plugin": "4.2.3",
     "ts-jest": "24.2.0",
     "ts-loader": "6.2.1",
     "typescript": "3.7.4",
-    "uglifyjs-webpack-plugin": "2.2.0",
     "vue-jest": "3.0.5",
     "vue-loader": "15.7.1",
     "vue-style-loader": "4.1.2",
-    "vue-template-compiler": "2.6.11",
+    "vue-template-compiler": "2.6.12",
     "webpack": "4.41.5",
     "webpack-bundle-analyzer": "3.6.0",
     "webpack-cli": "3.3.10",
-    "webpack-dev-server": "3.10.1",
+    "webpack-dev-server": "^3.11.2",
     "webpack-hot-middleware": "2.25.0",
     "webpack-merge": "4.2.1"
   }

@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const webpackConfig = {
@@ -83,7 +84,13 @@ const webpackConfig = {
       },
     ],
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [
+    new VueLoaderPlugin(),
+    new HtmlPlugin({
+      template: 'index.html',
+      chunksSortMode: 'dependency',
+    }),
+  ],
 };
 
 module.exports = webpackConfig;
