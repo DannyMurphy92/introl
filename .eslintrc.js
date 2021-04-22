@@ -1,10 +1,16 @@
 module.exports = {
   overrides: [
     {
-      files: ['./**/*.js'],
+      files: ['*.js'],
       rules: {
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['./src/*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'error',
       },
     },
     {
@@ -59,7 +65,6 @@ module.exports = {
     'standard/computed-property-even-spacing': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'prettier/prettier': 'error',
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-member-accessibility': [
       'error',
@@ -108,7 +113,7 @@ module.exports = {
     'comma-dangle': 'off',
     'prefer-regex-literals': 'off',
   },
-  plugins: ['import', 'prettier', '@typescript-eslint', 'eslint-plugin-vue'],
+  plugins: ['@typescript-eslint', 'eslint-plugin-vue'],
   settings: {
     polyfills: ['fetch'],
   },

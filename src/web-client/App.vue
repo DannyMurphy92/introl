@@ -7,9 +7,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import SiteFooter from '@/components/SiteFooter.vue'
-import SiteHeader from '@/components/SiteHeader.vue'
+import Vue from 'vue';
+import SiteFooter from '@/components/SiteFooter.vue';
+import SiteHeader from '@/components/SiteHeader.vue';
 
 export default Vue.extend({
   name: 'App',
@@ -17,7 +17,7 @@ export default Vue.extend({
     SiteFooter,
     SiteHeader,
   },
-})
+});
 </script>
 
 <style lang="scss">
