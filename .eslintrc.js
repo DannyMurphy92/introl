@@ -122,4 +122,4 @@ module.exports = {
     node: true,
     jest: true,
   },
-};
+}

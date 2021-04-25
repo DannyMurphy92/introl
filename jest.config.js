@@ -1,18 +1,18 @@
 module.exports = {
-  moduleFileExtensions: ['js', 'json', 'vue', 'ts'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+    '^~/(.*)$': '<rootDir>/$1',
+    '^vue$': 'vue/dist/vue.common.js',
+  },
+  moduleFileExtensions: ['ts', 'js', 'vue', 'json'],
   transform: {
-    // process `*.vue` files with `vue-jest`
-    '.*\\.vue$': 'vue-jest',
     '^.+\\.ts$': 'ts-jest',
+    '^.+\\.js$': 'babel-jest',
+    '.*\\.(vue)$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
-  snapshotSerializers: ['jest-serializer-vue'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/web-client/$1',
-  },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)$',
-
-  roots: ['<rootDir>/src/web-client', '<rootDir>/webpack'],
+  snapshotSerializers: ['jest-serializer-vue'],
   globals: {
     'vue-jest': {
       babelConfig: false,

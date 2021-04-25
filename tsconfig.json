@@ -17,28 +17,31 @@
     "module": "esnext",
     "moduleResolution": "node",
     "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/web-client/*"
-      ]
-    },
     "allowSyntheticDefaultImports": true,
     /* Experimental Options  */
     "experimentalDecorators": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
     "lib": [
       "esnext",
       "dom",
       "dom.iterable",
       "scripthost"
     ],
-    "esModuleInterop": true,
-    "resolveJsonModule": true
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+
   },
   "include": [
-    "./src/web-client/**/*.ts",
-    "./src/web-client/**/*.vue"
+    "./**/*.ts",
+    "./**/*.vue"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".nuxt",
+    "dist"
   ]
 }
