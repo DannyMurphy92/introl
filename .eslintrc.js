@@ -117,9 +117,10 @@ module.exports = {
   settings: {
     polyfills: ['fetch'],
   },
+  ignorePatterns: ['dist', 'node_modules, ".nuxt'],
   env: {
     browser: true,
     node: true,
     jest: true,
   },
-}
+};
