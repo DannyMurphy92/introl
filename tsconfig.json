@@ -1,43 +1,29 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "target": "es5",
-    "allowJs": false,
-    "sourceMap": true,
-    "pretty": true,
-    /* Strict Type-Checking Options */
-    "strict": true,
-    "alwaysStrict": true,
-    /* Additional Checks */
-    "noUnusedParameters": false,
-    "noUnusedLocals": true,
-    "removeComments": false,
-    "noFallthroughCasesInSwitch": true,
-    /* Module Resolution Options */
-    "module": "esnext",
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "allowSyntheticDefaultImports": true,
-    /* Experimental Options  */
-    "experimentalDecorators": false,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM"
     ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
       ]
     },
-
   },
   "include": [
+    "./**/*.vue",
     "./**/*.ts",
-    "./**/*.vue"
   ],
   "exclude": [
     "node_modules",
