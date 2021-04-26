@@ -35,7 +35,15 @@ export default {
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    postcss: {
+      plugins: [
+        require('postcss-flexbugs-fixes'),
+        require('autoprefixer'),
+        require('node-css-mqpacker')({ sort: require('./webpack/cssMqPackerSort') }),
+      ],
+    },
+  },
 
   generate: {
     subFolders: false,
