@@ -1,0 +1,16 @@
+$mq-xs: 0 !default;
+$mq-sm: 640px !default;
+$mq-md: 768px !default;
+// https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints
+$mq-lg: 1024px - 16px !default;
+$mq-xl: 1280px - 16px !default;
+
+$site-width-max: 1200px !default;
+
+$site-pad: 12px !default;
+$site-pad-lg: 20px !default;
+
+$site-column-gutter: 20px !default;
+$site-column-gutter-half: $site-column-gutter / 2;
+
+$z-indexes: ('loader-overlay', 'responsivebar', 'popout-close', 'popout', 'current-form-overlay', 'tooltip');

@@ -1,20 +1,26 @@
 <template>
   <div>
+    <Header />
     <Nuxt />
   </div>
 </template>
 
+<script>
+import { defineComponent } from '@vue/composition-api';
+import Header from './Header.vue';
+
+export default defineComponent({
+  name: 'Layout',
+  components: {
+    Header,
+  },
+  setup() {},
+});
+</script>
+
 <style lang="scss">
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: $font-family-primary;
   font-size: 16px;
   word-spacing: 1px;
   box-sizing: border-box;
