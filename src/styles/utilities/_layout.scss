@@ -1,0 +1,17 @@
+.site-trunk {
+  display: block;
+  max-width: $site-width-max;
+  padding-left: $site-pad;
+  padding-right: $site-pad;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-query-min($mq-sm) {
+    padding-left: $site-pad-lg;
+    padding-right: $site-pad-lg;
+  }
+
+  &--form {
+    max-width: 800px;
+  }
+}
