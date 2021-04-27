@@ -4,7 +4,7 @@ export default {
   srcDir: 'src/',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt',
+    title: 'Introl',
     htmlAttrs: {
       lang: 'en',
     },
@@ -29,6 +29,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    // https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -47,5 +49,9 @@ export default {
 
   generate: {
     subFolders: false,
+  },
+
+  styleResources: {
+    scss: ['./src/styles/mixins/_all.scss', './src/styles/variables/_all.scss', './src/styles/utilities/_all.scss'],
   },
 };
