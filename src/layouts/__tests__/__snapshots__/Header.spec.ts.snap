@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header THEN renders correctly 1`] = `
+<div class="site-trunk header">
+  <logo-stub class="header__logo"></logo-stub>
+</div>
+`;

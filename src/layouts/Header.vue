@@ -1,23 +1,33 @@
 <template>
   <div class="site-trunk header">
     <Logo class="header__logo" />
+    <Accordion>
+      <template #header>
+        <span>Click meeee</span>
+      </template>
+      <template #body>
+        <span>Hello</span>
+      </template>
+    </Accordion>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import Vue from 'vue';
 import Logo from '@/components/Logo.vue';
+import Accordion from '@/components/Accordion.vue';
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Header',
   components: {
     Logo,
+    Accordion,
   },
 });
 </script>
 
 <style lang="scss" scoped>
 .header__logo {
-  width: 100px;
-  height: 50px;
+  width: 200px;
+  height: 100px;
 }
 </style>

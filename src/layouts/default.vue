@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api';
+import Vue from 'vue';
 import Header from './Header.vue';
 import Footer from './Footer.vue';
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Layout',
   components: {
     Header,

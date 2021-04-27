@@ -2,10 +2,10 @@
   <Logo />
 </template>
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import Vue from 'vue';
 import Logo from '@/components/Logo.vue';
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Footer',
   components: {
     Logo,
