@@ -6,7 +6,7 @@ import { defineComponent } from '@vue/composition-api';
 import Logo from '@/components/Logo.vue';
 
 export default defineComponent({
-  name: 'Header',
+  name: 'Footer',
   components: {
     Logo,
   },
