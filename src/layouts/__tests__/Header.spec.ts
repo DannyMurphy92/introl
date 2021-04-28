@@ -17,6 +17,10 @@ describe('Header', () => {
   });
 
   it('THEN renders the logo', () => {
-    expect(wrapper.findComponent({ name: 'Logo' }).exists()).toBe(true);
+    expect(wrapper.find('.header__logo').exists()).toBe(true);
+  });
+
+  it('THEN a contact component', () => {
+    expect(wrapper.find('.header__contact').exists()).toBe(true);
   });
 });
