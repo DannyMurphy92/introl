@@ -1,14 +1,30 @@
 <template>
-  <Logo />
+  <div class="footer">
+    <div class="site-trunk footer_container">
+      <ContactInfo class="footer__contact" />
+    </div>
+  </div>
 </template>
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
-import Logo from '@/components/Logo.vue';
+import Vue from 'vue';
+import ContactInfo from '@/components/ContactInfo.vue';
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Footer',
   components: {
-    Logo,
+    ContactInfo,
   },
 });
 </script>
+
+<style lang="scss">
+.footer {
+  background: $color-grey;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__contact {
+    // color: $color-white;
+  }
+}
+</style>
