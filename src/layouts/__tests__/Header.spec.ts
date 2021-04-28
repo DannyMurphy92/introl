@@ -1,4 +1,4 @@
-import Header from '../Header.vue';
+import Header from '@/layouts/Header.vue';
 import { Wrapper, shallowMount } from '@vue/test-utils';
 
 describe('Header', () => {

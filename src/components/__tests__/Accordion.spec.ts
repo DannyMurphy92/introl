@@ -1,4 +1,4 @@
-import Accordion from '../Accordion.vue';
+import Accordion from '@/components/Accordion.vue';
 import { mount, Wrapper } from '@vue/test-utils';
 
 describe('Accordion', () => {
