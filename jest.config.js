@@ -16,5 +16,8 @@ module.exports = {
     'vue-jest': {
       babelConfig: false,
     },
+    'ts-jest': {
+      tsConfig: 'tsconfig.json',
+    },
   },
 };
