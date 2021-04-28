@@ -1,4 +1,5 @@
 module.exports = {
+  verbose: true,
   moduleFileExtensions: ['ts', 'js', 'vue', 'json'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
@@ -17,7 +18,7 @@ module.exports = {
       babelConfig: false,
     },
     'ts-jest': {
-      tsConfig: 'tsconfig.json',
+      tsconfig: 'tsconfig.json',
     },
   },
 };
