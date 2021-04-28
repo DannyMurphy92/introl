@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header THEN renders correctly 1`] = `
-<div class="site-trunk header">
-  <logo-stub class="header__logo"></logo-stub>
+<div class="header">
+  <div class="site-trunk header__container">
+    <div class="header__logo__container"><img src="@/static/logo.png" alt="logo" class="header__logo"></div>
+    <div>
+      <accordion-stub class="header__contact"></accordion-stub>
+    </div>
+  </div>
 </div>
 `;

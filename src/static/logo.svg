@@ -1,5 +1,4 @@
-<template>
-  <svg
+<svg
     id="svg"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -46,25 +45,3 @@
       />
     </g>
   </svg>
-</template>
-
-<script lang="ts">
-import Vue from 'vue';
-
-export default Vue.extend({
-  name: 'Logo',
-});
-</script>
-
-<style>
-.NuxtLogo {
-  animation: 1s appear;
-  margin: auto;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-}
-</style>

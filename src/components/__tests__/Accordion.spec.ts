@@ -2,7 +2,7 @@ import Accordion from '../Accordion.vue';
 import { mount, Wrapper } from '@vue/test-utils';
 
 describe('Accordion', () => {
-  let wrapper: Wrapper<Accordion>;
+  let wrapper: Wrapper<any>;
 
   const headerElement = '<div id="header">Test header</div>';
   const bodyElement = '<div id="body">Test body</div>';
@@ -43,6 +43,10 @@ describe('Accordion', () => {
       expect(body.exists()).toBe(true);
       expect(body.text()).toBe('Test body');
       expect(body.isVisible()).toBe(true);
+    });
+
+    it('THEN adds the open modifier class to the icon', () => {
+      expect(wrapper.find('.accordion__header__icon--open').exists()).toBe(true);
     });
   });
 });

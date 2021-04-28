@@ -27,6 +27,10 @@ html {
   color: $font-color;
   word-spacing: 1px;
   box-sizing: border-box;
+
+  a {
+    color: $font-color;
+  }
 }
 
 *,

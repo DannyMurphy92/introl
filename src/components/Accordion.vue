@@ -5,6 +5,19 @@
       @click="toggleAccordian()"
     >
       <slot name="header" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="accordion__header__icon"
+        :class="[{ 'accordion__header__icon--open': isOpen }]"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+        />
+      </svg>
     </div>
     <transition
       name="accordion"
@@ -56,10 +69,14 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .accordion {
-  height: 0;
-
   &__header {
     cursor: pointer;
+
+    &__icon {
+      &--open {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   &__body {
