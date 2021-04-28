@@ -14,9 +14,6 @@ module.exports = {
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)$',
   snapshotSerializers: ['jest-serializer-vue'],
   globals: {
-    'vue-jest': {
-      babelConfig: false,
-    },
     'ts-jest': {
       tsconfig: 'tsconfig.json',
     },
