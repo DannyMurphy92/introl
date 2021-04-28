@@ -54,7 +54,6 @@ export default Vue.extend({
 
   &__contact {
     &__header {
-      font-weight: 900;
       font-size: 26px;
     }
 
