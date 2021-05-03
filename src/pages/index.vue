@@ -68,9 +68,15 @@ export default Vue.extend({
 
   &__intro {
     margin-bottom: 25px;
-    padding: 15px 25px;
+    padding: 15px;
     color: $color-white;
+    text-align: center;
     background: $color-secondary;
+
+    @include media-query-min($mq-md) {
+      padding: 25px;
+      text-align: left;
+    }
 
     &__heading {
       font-size: 22px;

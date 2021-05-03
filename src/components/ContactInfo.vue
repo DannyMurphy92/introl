@@ -37,6 +37,12 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .contact-info {
+  color: $color-black;
+
+  a {
+    color: $color-black;
+  }
+
   &--light {
     color: $color-white;
 

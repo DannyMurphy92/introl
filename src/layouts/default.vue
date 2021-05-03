@@ -50,7 +50,7 @@ html {
   &__body {
     display: flex;
     flex: 1 0 auto;
-    padding: 50px 0;
+    padding-bottom: 50px;
   }
 }
 </style>
