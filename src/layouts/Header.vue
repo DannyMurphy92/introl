@@ -43,7 +43,7 @@ export default Vue.extend({
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -54,7 +54,9 @@ export default Vue.extend({
 
   &__contact {
     &__header {
-      font-size: 26px;
+      @include media-query-min($mq-md) {
+        font-size: 26px;
+      }
     }
 
     &__body {

@@ -1,8 +1,10 @@
 <template>
   <div class="layout">
-    <Header />
-    <Nuxt />
-    <Footer class="layout__footer" />
+    <div class="layout__content-container">
+      <Header />
+      <Nuxt />
+      <Footer class="layout__footer" />
+    </div>
   </div>
 </template>
 
@@ -43,8 +45,12 @@ html {
 
 <style lang="scss" scoped>
 .layout {
+  position: relative;
   min-height: 100vh;
-  padding-bottom: $footer-height + $footer-vertical-padding * 2;
+
+  &__content-container {
+    padding-bottom: $footer-height + $footer-vertical-padding * 2;
+  }
 
   &__footer {
     bottom: 0;

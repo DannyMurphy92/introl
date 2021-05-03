@@ -63,11 +63,19 @@ export default Vue.extend({
 
   &__services {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 
+    @include media-query-min($mq-md) {
+      flex-direction: row;
+    }
+
     &__item {
-      margin: 0 8px;
+      margin-bottom: 20px;
+
+      @include media-query-min($mq-md) {
+        margin: 0 12px;
+      }
     }
   }
 }

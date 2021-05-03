@@ -49,19 +49,29 @@ export default Vue.extend({
 
 <style lang="scss">
 .info-card {
-  width: 350px;
+  width: 100%;
+
+  @include media-query-min($mq-lg) {
+    width: 350px;
+  }
 
   &__header {
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: $font-weight-bold;
     background: $color-grey;
     border-radius: 3px;
-    padding: 10px;
+    padding: 5px;
+
+    @include media-query-min($mq-lg) {
+      padding: 10px;
+      font-size: 24px;
+    }
   }
 
   &__body {
     margin-top: 5px;
+    text-align: center;
 
     &__icon-container {
       display: flex;

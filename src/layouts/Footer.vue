@@ -2,6 +2,9 @@
   <div class="footer">
     <div class="site-trunk footer_container">
       <ContactInfo class="footer__contact" />
+      <div class="footer__legal">
+        <span>Copyright &copy; Introl {{ currentYear }}. All rights reserved.</span>
+      </div>
     </div>
   </div>
 </template>
@@ -13,6 +16,11 @@ export default Vue.extend({
   name: 'Footer',
   components: {
     ContactInfo,
+  },
+  computed: {
+    currentYear() {
+      return new Date(Date.now()).getFullYear();
+    },
   },
 });
 </script>
