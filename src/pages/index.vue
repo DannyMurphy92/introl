@@ -1,35 +1,29 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">
-        nuxt
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <InfoCard
+        header="Best in class delivery"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet feugiat massa, a ultrices quam.
+            Cras in ornare risus. Phasellus erat odio, finibus vitae mollis et, maximus imperdiet augue. Aliquam nec
+            tempor velit. Maecenas aliquam porttitor ligula et dignissim. Maecenas hendrerit rutrum vulputate. In hac
+            habitasse platea dictumst. Etiam malesuada elit felis, in suscipit lacus convallis ut. Aliquam at enim
+            sapien. Sed bibendum malesuada libero, at vehicula tellus rhoncus nec. Donec gravida ex id ex interdum
+            iaculis. Quisque sed sapien justo. Etiam quam elit, hendrerit ac lectus eget, consequat gravida
+            libero."
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import InfoCard from '@/components/InfoCard.vue';
 
-export default Vue.extend({});
+export default Vue.extend({
+  components: {
+    InfoCard,
+  },
+});
 </script>
 
 <style lang="scss">
