@@ -36,17 +36,23 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.contact-info__email {
-  @include media-query-min($mq-md) {
-    font-weight: $font-weight-semi-bold;
-  }
-
+.contact-info {
   &--light {
     color: $color-white;
+
+    a {
+      color: $color-white;
+    }
   }
 
-  &__icon {
-    margin-right: 3px;
+  &__email {
+    @include media-query-min($mq-md) {
+      font-weight: $font-weight-semi-bold;
+    }
+
+    &__icon {
+      margin-right: 3px;
+    }
   }
 }
 </style>

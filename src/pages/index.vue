@@ -64,6 +64,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .home-page {
+  width: 100%;
+
   &__intro {
     margin-bottom: 25px;
     padding: 15px 25px;
