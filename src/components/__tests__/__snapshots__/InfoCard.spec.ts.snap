@@ -4,8 +4,8 @@ exports[`InfoCard GIVEN initial state GIVEN an icon THEN renders correctly 1`] =
 <div class="info-card">
   <div class="info-card__header"><span>Test header</span></div>
   <div class="info-card__body">
-    <div class="info-card__body__icon">
-      <fontawesomeicon-stub icon="[object Object]"></fontawesomeicon-stub>
+    <div class="info-card__body__icon-container">
+      <fontawesomeicon-stub icon="[object Object]" size="lg" class="info-card__body__icon"></fontawesomeicon-stub>
     </div> <span>Test body</span>
   </div>
 </div>

@@ -6,9 +6,13 @@
     <div class="info-card__body">
       <div
         v-if="icon"
-        class="info-card__body__icon"
+        class="info-card__body__icon-container"
       >
-        <FontAwesomeIcon :icon="icon" />
+        <FontAwesomeIcon
+          class="info-card__body__icon"
+          :icon="icon"
+          size="lg"
+        />
       </div>
       <span>{{ body }}</span>
     </div>
@@ -45,15 +49,30 @@ export default Vue.extend({
 
 <style lang="scss">
 .info-card {
-  width: 300px;
+  width: 350px;
 
   &__header {
+    text-align: center;
     font-size: 24px;
     font-weight: $font-weight-bold;
     background: $color-grey;
     border-radius: 3px;
-    padding: 10px 0;
-    margin-bottom: 15px;
+    padding: 10px;
+  }
+
+  &__body {
+    margin-top: 5px;
+
+    &__icon-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 5px 0;
+    }
+
+    &__icon {
+      color: $color-primary;
+    }
   }
 }
 </style>

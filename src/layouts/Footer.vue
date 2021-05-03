@@ -20,11 +20,8 @@ export default Vue.extend({
 <style lang="scss">
 .footer {
   background: $color-grey;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  &__contact {
-    // color: $color-white;
-  }
+  padding: $footer-vertical-padding 0;
+  width: 100%;
+  height: $footer-height;
 }
 </style>
