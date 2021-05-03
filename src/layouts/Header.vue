@@ -37,7 +37,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .header {
-  background: $color-tertiary;
+  background: $color-white;
 
   &__container {
     display: flex;

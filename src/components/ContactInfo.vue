@@ -1,5 +1,8 @@
 <template>
-  <div class="contact-info">
+  <div
+    class="contact-info"
+    :class="[{ 'contact-info--light': light }]"
+  >
     <a
       class="contact-info__email"
       :href="`mailto:${email}`"
@@ -20,6 +23,9 @@ export default Vue.extend({
   components: {
     FontAwesomeIcon,
   },
+  props: {
+    light: Boolean,
+  },
   data() {
     return {
       email: 'info@introl.com',
@@ -33,6 +39,10 @@ export default Vue.extend({
 .contact-info__email {
   @include media-query-min($mq-md) {
     font-weight: $font-weight-semi-bold;
+  }
+
+  &--light {
+    color: $color-white;
   }
 
   &__icon {

@@ -64,6 +64,7 @@ $border-radius: 5px;
     background: $color-secondary;
     padding: 5px;
     border-radius: $border-radius $border-radius 0 0;
+    color: $color-white;
 
     @include media-query-min($mq-lg) {
       padding: 10px;
@@ -74,7 +75,10 @@ $border-radius: 5px;
   &__body {
     padding: 10px;
     text-align: center;
-    background: #cecece;
+    border-color: $color-primary;
+    border-width: 2px;
+    border-top-width: 0;
+    border-style: solid;
     border-radius: 0 0 $border-radius $border-radius;
 
     &__icon-container {
