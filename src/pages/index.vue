@@ -10,6 +10,7 @@
             sapien. Sed bibendum malesuada libero, at vehicula tellus rhoncus nec. Donec gravida ex id ex interdum
             iaculis. Quisque sed sapien justo. Etiam quam elit, hendrerit ac lectus eget, consequat gravida
             libero."
+        :icon="faSpinner"
       />
     </div>
   </div>
@@ -18,10 +19,15 @@
 <script lang="ts">
 import Vue from 'vue';
 import InfoCard from '@/components/InfoCard.vue';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 export default Vue.extend({
   components: {
     InfoCard,
+  },
+
+  data() {
+    return { faSpinner };
   },
 });
 </script>
