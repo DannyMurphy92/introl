@@ -2,7 +2,10 @@
   <div class="footer">
     <div class="site-trunk">
       <div class="footer__container">
-        <ContactInfo class="footer__contact" />
+        <ContactInfo
+          class="footer__contact"
+          :light="true"
+        />
         <div class="footer__legal">
           <span>Copyright &copy; Introl {{ currentYear }}. All rights reserved.</span>
         </div>
@@ -29,7 +32,8 @@ export default Vue.extend({
 
 <style lang="scss">
 .footer {
-  background: $color-grey;
+  background: $color-secondary;
+  color: $color-white;
   padding: 20px 0;
   width: 100%;
   text-align: center;

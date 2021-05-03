@@ -37,7 +37,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .header {
-  background: $color-grey;
+  background: $color-white;
 
   &__container {
     display: flex;
@@ -49,7 +49,11 @@ export default Vue.extend({
   }
 
   &__logo {
-    width: 200px;
+    width: 100px;
+
+    @include media-query-min($mq-md) {
+      width: 200px;
+    }
   }
 
   &__contact {

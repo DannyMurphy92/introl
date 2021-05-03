@@ -29,10 +29,6 @@ html {
   color: $font-color;
   word-spacing: 1px;
   box-sizing: border-box;
-
-  a {
-    color: $font-color;
-  }
 }
 
 *,
@@ -54,6 +50,7 @@ html {
   &__body {
     display: flex;
     flex: 1 0 auto;
+    padding-bottom: 50px;
   }
 }
 </style>
