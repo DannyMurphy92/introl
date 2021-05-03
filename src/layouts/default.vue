@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="layout">
     <Header />
-    <Nuxt />
+    <main class="layout__body">
+      <Nuxt />
+    </main>
     <Footer />
   </div>
 </template>
@@ -38,5 +40,20 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+</style>
+
+<style lang="scss" scoped>
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  position: relative;
+
+  &__body {
+    display: flex;
+    flex: 1 0 auto;
+  }
 }
 </style>

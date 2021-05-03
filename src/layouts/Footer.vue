@@ -1,7 +1,12 @@
 <template>
   <div class="footer">
-    <div class="site-trunk footer_container">
-      <ContactInfo class="footer__contact" />
+    <div class="site-trunk">
+      <div class="footer__container">
+        <ContactInfo class="footer__contact" />
+        <div class="footer__legal">
+          <span>Copyright &copy; Introl {{ currentYear }}. All rights reserved.</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -14,17 +19,37 @@ export default Vue.extend({
   components: {
     ContactInfo,
   },
+  computed: {
+    currentYear() {
+      return new Date(Date.now()).getFullYear();
+    },
+  },
 });
 </script>
 
 <style lang="scss">
 .footer {
   background: $color-grey;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
 
   &__contact {
-    // color: $color-white;
+    margin-bottom: 10px;
+
+    @include media-query-min($mq-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-query-min($mq-md) {
+      flex-direction: row;
+    }
   }
 }
 </style>
