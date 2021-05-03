@@ -1,9 +1,11 @@
 <template>
   <div class="footer">
-    <div class="site-trunk footer_container">
-      <ContactInfo class="footer__contact" />
-      <div class="footer__legal">
-        <span>Copyright &copy; Introl {{ currentYear }}. All rights reserved.</span>
+    <div class="site-trunk">
+      <div class="footer__container">
+        <ContactInfo class="footer__contact" />
+        <div class="footer__legal">
+          <span>Copyright &copy; Introl {{ currentYear }}. All rights reserved.</span>
+        </div>
       </div>
     </div>
   </div>
@@ -28,8 +30,26 @@ export default Vue.extend({
 <style lang="scss">
 .footer {
   background: $color-grey;
-  padding: $footer-vertical-padding 0;
+  padding: 20px 0;
   width: 100%;
-  height: $footer-height;
+  text-align: center;
+
+  &__contact {
+    margin-bottom: 10px;
+
+    @include media-query-min($mq-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-query-min($mq-md) {
+      flex-direction: row;
+    }
+  }
 }
 </style>
