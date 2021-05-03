@@ -34,10 +34,6 @@ describe('InfoCard', () => {
         mountComponent();
       });
 
-      it('THEN renders correctly', () => {
-        expect(wrapper).toMatchSnapshot();
-      });
-
       it('THEN renders the icon', () => {
         expect(wrapper.findComponent(FontAwesomeIcon).exists()).toBe(true);
       });

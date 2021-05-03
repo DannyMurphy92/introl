@@ -2,9 +2,11 @@
 
 exports[`Footer Then renders correctly 1`] = `
 <div class="footer">
-  <div class="site-trunk footer_container">
-    <contactinfo-stub class="footer__contact"></contactinfo-stub>
-    <div class="footer__leagal"><span>Copyright © Introl 1999. All rights reserved.</span></div>
+  <div class="site-trunk">
+    <div class="footer__container">
+      <contactinfo-stub class="footer__contact"></contactinfo-stub>
+      <div class="footer__legal"><span>Copyright © Introl 1999. All rights reserved.</span></div>
+    </div>
   </div>
 </div>
 `;
