@@ -47,7 +47,9 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+$border-radius: 5px;
+
 .info-card {
   width: 100%;
 
@@ -59,9 +61,9 @@ export default Vue.extend({
     text-align: center;
     font-size: 18px;
     font-weight: $font-weight-bold;
-    background: $color-grey;
-    border-radius: 3px;
+    background: $color-secondary;
     padding: 5px;
+    border-radius: $border-radius $border-radius 0 0;
 
     @include media-query-min($mq-lg) {
       padding: 10px;
@@ -70,14 +72,16 @@ export default Vue.extend({
   }
 
   &__body {
-    margin-top: 5px;
+    padding: 10px;
     text-align: center;
+    background: #cecece;
+    border-radius: 0 0 $border-radius $border-radius;
 
     &__icon-container {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      padding: 5px 0;
+      margin-bottom: 5px;
     }
 
     &__icon {

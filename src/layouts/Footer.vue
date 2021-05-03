@@ -29,7 +29,7 @@ export default Vue.extend({
 
 <style lang="scss">
 .footer {
-  background: $color-grey;
+  background: $color-secondary;
   padding: 20px 0;
   width: 100%;
   text-align: center;

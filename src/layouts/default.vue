@@ -54,6 +54,7 @@ html {
   &__body {
     display: flex;
     flex: 1 0 auto;
+    padding: 50px 0;
   }
 }
 </style>
